@@ -44,7 +44,7 @@ public class TasksDAO {
 		}
 		values.put(TasksSQLiteHelper.COLUMN_PRIORITY, priority); 
 		values.put(TasksSQLiteHelper.COLUMN_DATE, t.getDate()); 
-		values.put(TasksSQLiteHelper.COLUMN_TASK, t.getTaskDetail()); 
+		values.put(TasksSQLiteHelper.COLUMN_TASK, t.getTaskDetails()); 
 		values.put(TasksSQLiteHelper.COLUMN_COMPLETED,done); 
 		
 		long insertId = database.insert(TasksSQLiteHelper.TABLE_TASKS, null, values);
@@ -76,7 +76,7 @@ public class TasksDAO {
 		
 		values.put(TasksSQLiteHelper.COLUMN_PRIORITY,  priority); 
 		values.put(TasksSQLiteHelper.COLUMN_DATE, t.getDate()); 
-		values.put(TasksSQLiteHelper.COLUMN_TASK, t.getTaskDetail()); 
+		values.put(TasksSQLiteHelper.COLUMN_TASK, t.getTaskDetails()); 
 		values.put(TasksSQLiteHelper.COLUMN_COMPLETED, done); 
 		
 		database.update(TasksSQLiteHelper.TABLE_TASKS, values, TasksSQLiteHelper.COLUMN_ID +" = "+id, null); 
@@ -96,7 +96,7 @@ public class TasksDAO {
 		
 		return taskList; 
 	}
-	
+	//core method that gets the info from the database
 	private Task cursorToTask(Cursor cursor){
 		int id = cursor.getInt(0); 
 		int priority = cursor.getInt(1); 

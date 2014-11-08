@@ -38,7 +38,7 @@ public class Task {
 	public String getDate(){
 		return date; 
 	}
-	public String getTaskDetail(){
+	public String getTaskDetails(){
 		return task; 
 	}
 	public boolean getCompleted(){
