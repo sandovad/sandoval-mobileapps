@@ -49,7 +49,8 @@ public class TasksDAO {
 		
 		long insertId = database.insert(TasksSQLiteHelper.TABLE_TASKS, null, values);
 		
-		Cursor cursor = database.query(TasksSQLiteHelper.TABLE_TASKS,  allColumns, TasksSQLiteHelper.COLUMN_ID + " = "+ insertId, null, null,null, null); 
+		Cursor cursor = database.query(TasksSQLiteHelper.TABLE_TASKS,  allColumns, 
+				TasksSQLiteHelper.COLUMN_ID + " = "+ insertId, null, null,null, null); 
 	
 		cursor.moveToLast(); 
 		Task newTask = cursorToTask(cursor); 

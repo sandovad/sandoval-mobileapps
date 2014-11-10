@@ -20,7 +20,7 @@ public class EditTaskActivity extends Activity {
 		toDoList = new ToDoList(this); 
 		
 		Intent intent = getIntent(); 
-		int taskId = intent.getIntExtra("com.example.lasnametodolist.taskId", 0); 
+		int taskId = intent.getIntExtra("com.example.sandovaltodolist.taskId", 0); 
 		if(taskId!=0){
 			populateTaskData(taskId); 
 		}
