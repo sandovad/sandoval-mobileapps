@@ -8,7 +8,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="#D8FAFF"
+    android:background="@drawable/greenfootprents"
     tools:context="com.example.pedometer.Pedometer" >
 
     <TableRow
@@ -46,7 +46,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="resetSteps"
-            android:background="#D8EDFF"
+            android:background="#C0FFDE"
             android:text="Reset Steps" />
 
     </TableRow>
